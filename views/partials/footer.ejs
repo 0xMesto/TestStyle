@@ -1,0 +1,118 @@
+<footer class="bg-gradient-to-r from-purple-800 to-blue-800 text-white py-24 relative overflow-hidden">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="space-y-6" data-aos="fade-up">
+        <h3 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Edward Alouani</h3>
+        <p class="text-blue-200 text-lg leading-relaxed">Crafting high-converting landing pages tailored to your brand and goals.</p>
+        <div class="flex space-x-6">
+          <a href="https://github.com/0xMesto" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">
+            <i class="fab fa-github text-3xl"></i>
+          </a>
+          <a href="https://discord.com/users/0xPazuzu" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">
+            <i class="fab fa-discord text-3xl"></i>
+          </a>
+          <a href="https://twitter.com/0xMesto" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">
+            <svg class="w-7 h-7" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4 class="text-2xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Quick Links</h4>
+        <ul class="space-y-4">
+          <% ['Home', 'Portfolio', 'Services', 'Process', 'About', 'Contact'].forEach(link => { %>
+            <li>
+              <a href="#<%= link.toLowerCase() %>" class="text-blue-200 hover:text-white transition-colors duration-300 flex items-center group">
+                <i class="fas fa-chevron-right mr-2 text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                <span class="text-lg"><%= link %></span>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h4 class="text-2xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Services</h4>
+        <ul class="space-y-4">
+          <% ['Landing Page Development', 'Conversion Optimization', 'UI/UX Design', 'Speed Optimization', 'SEO-Friendly Design'].forEach(service => { %>
+            <li>
+              <a href="#services" class="text-blue-200 hover:text-white transition-colors duration-300 flex items-center group">
+                <i class="fas fa-check-circle mr-2 text-sm text-green-400 transition-transform duration-300 group-hover:scale-110"></i>
+                <span class="text-lg"><%= service %></span>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h4 class="text-2xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Newsletter</h4>
+        <p class="text-blue-200 mb-6 text-lg leading-relaxed">Stay updated with the latest trends in landing page design and conversion optimization.</p>
+        <form id="newsletter-form" class="flex">
+          <input type="email" name="email" placeholder="Your email" class="bg-gray-800 bg-opacity-50 text-white px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-600 flex-grow text-lg">
+          <button type="submit" class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-r-lg hover:from-blue-600 hover:to-purple-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+            <i class="fas fa-paper-plane text-xl"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="mt-16 pt-8 border-t border-blue-800 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-blue-200 text-lg mb-4 md:mb-0">&copy; 2023 Edward Alouani. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="#" class="text-blue-200 hover:text-white transition-colors duration-300 text-lg">Privacy Policy</a>
+        <a href="#" class="text-blue-200 hover:text-white transition-colors duration-300 text-lg">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-blue-900 opacity-50"></div>
+  <div class="absolute inset-0 bg-pattern opacity-10"></div>
+  
+  <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_u25cckyh.json" background="transparent" speed="1" class="absolute bottom-0 right-0 w-64 h-64 opacity-20" loop autoplay></lottie-player>
+</footer>
+
+<style>
+  .bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+
+    const newsletterForm = document.getElementById('newsletter-form');
+    newsletterForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = newsletterForm.querySelector('input[type="email"]').value;
+
+      try {
+        const response = await fetch('/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, formType: 'newsletter' }),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          alert('Thank you for subscribing to our newsletter!');
+          newsletterForm.reset();
+        } else {
+          alert('There was an error subscribing to the newsletter. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error subscribing to the newsletter. Please try again.');
+      }
+    });
+  });
+</script>

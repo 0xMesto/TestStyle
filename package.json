@@ -1,0 +1,16 @@
+{
+    "name": "portfolio-landing-page",
+    "version": "1.0.0",
+    "description": "Personal landing page showcasing portfolio and freelance services",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "ejs": "^3.1.6"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
