@@ -1,22 +1,23 @@
 <section class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-20 sm:py-32">
   <div id="hero-particles" class="absolute inset-0 opacity-30"></div>
+  <div id="hero-vanta" class="absolute inset-0 opacity-50"></div>
   <div class="container mx-auto px-4 relative z-10">
     <div class="flex flex-col lg:flex-row items-center justify-between">
       <div class="lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display mb-6 leading-tight">
-          Craft Your Digital <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500 animate-pulse">Masterpiece</span>
+          Craft Your Digital <span id="hero-typed" class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500"></span>
         </h1>
         <p class="text-lg sm:text-xl mb-8 text-indigo-100 leading-relaxed">
           Unleash your creativity with CardCraft. Design stunning, interactive cards that captivate and inspire.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#" class="btn-primary">
+          <a href="#" class="btn-primary group">
             Get Started
-            <i class="fas fa-arrow-right ml-2"></i>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
           </a>
-          <a href="#" class="btn-secondary">
+          <a href="#" class="btn-secondary group">
             Learn More
-            <i class="fas fa-info-circle ml-2"></i>
+            <i class="fas fa-info-circle ml-2 group-hover:rotate-12 transition-transform"></i>
           </a>
         </div>
       </div>
@@ -37,15 +38,28 @@
     </div>
     <div class="mt-20 text-center" data-aos="fade-up">
       <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Trusted by Industry Leaders</h2>
-      <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
-        <img src="path/to/logo1.png" alt="Company 1" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
-        <img src="path/to/logo2.png" alt="Company 2" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
-        <img src="path/to/logo3.png" alt="Company 3" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
-        <img src="path/to/logo4.png" alt="Company 4" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+      <div class="swiper-container">
+        <div class="swiper-wrapper flex items-center justify-center">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150x50.png?text=Logo+1" alt="Company 1" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150x50.png?text=Logo+2" alt="Company 2" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150x50.png?text=Logo+3" alt="Company 3" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150x50.png?text=Logo+4" alt="Company 4" class="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-indigo-50 to-transparent"></div>
+  <div class="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-yellow-400 rounded-full opacity-10 animate-pulse"></div>
+  <div class="absolute bottom-0 left-0 -mb-16 -ml-16 w-64 h-64 bg-pink-400 rounded-full opacity-10 animate-pulse"></div>
+  <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ksxp4rvx.json" background="transparent" speed="1" class="absolute bottom-0 right-0 w-64 h-64 opacity-50" loop autoplay></lottie-player>
 </section>
 
 <style>
@@ -74,6 +88,11 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
   particlesJS('hero-particles', {
     particles: {
       number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -92,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     retina_detect: true
   });
 
-  const typed = new Typed('#typed-text', {
+  new Typed('#hero-typed', {
     strings: ['Masterpiece', 'Experience', 'Journey'],
     typeSpeed: 50,
     backSpeed: 30,
@@ -100,5 +119,135 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     showCursor: false,
   });
+
+  VANTA.WAVES({
+    el: "#hero-vanta",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x4b0082,
+    shininess: 35.00,
+    waveHeight: 15.50,
+    waveSpeed: 0.75,
+    zoom: 0.65
+  });
+
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  VanillaTilt.init(document.querySelectorAll(".hover-lift"), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.5,
+  });
+
+  const heroSection = document.querySelector('section');
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.pageYOffset;
+    heroSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+  });
+
+  // Add animated underline effect to buttons
+  const buttons = document.querySelectorAll('.btn-primary, .btn-secondary');
+  buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      anime({
+        targets: button,
+        backgroundSize: ['0% 2px', '100% 2px'],
+        easing: 'easeInOutQuad',
+        duration: 300,
+        background: 'linear-gradient(to right, #ffffff 0%, #ffffff 100%) no-repeat 0 100%',
+      });
+    });
+    button.addEventListener('mouseleave', () => {
+      anime({
+        targets: button,
+        backgroundSize: ['100% 2px', '0% 2px'],
+        easing: 'easeInOutQuad',
+        duration: 300,
+      });
+    });
+  });
+
+  // Add parallax effect to floating elements
+  const floatingElements = document.querySelectorAll('.animate-blob');
+  window.addEventListener('mousemove', (e) => {
+    const { clientX, clientY } = e;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    
+    floatingElements.forEach(el => {
+      const dx = (clientX - centerX) / centerX;
+      const dy = (clientY - centerY) / centerY;
+      el.style.transform = `translate(${dx * 30}px, ${dy * 30}px)`;
+    });
+  });
+
+  // Initialize Rellax for parallax scrolling effect
+  new Rellax('.rellax', {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+
+  // Add a custom cursor effect
+  const cursor = document.createElement('div');
+  cursor.classList.add('custom-cursor');
+  document.body.appendChild(cursor);
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  });
+
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+  });
 });
 </script>
+
+<style>
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: all 0.1s ease;
+    z-index: 9999;
+  }
+
+  .cursor-hover {
+    transform: scale(1.5);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+</style>
+
